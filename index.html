@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Luminous Daily Kiosk</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+
+            <h1>Lulu's Lantern</h1>
+
+            <nav>
+
+                <div class="hamburger">☰</div>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="article.html">Articles</a></li>
+
+                    <li><a href="gallery.html">Gallery</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+        
+    </header>
+    
+    
+<main>
+
+    <section class="featured-articles">
+
+        <h2>Featured Articles</h2>
+
+        <img src="https://i.pinimg.com/736x/44/08/df/4408df736a89db09719a0cf8b3bb03b3.jpg" alt="Featured Article">
+
+    </section>    
+
+    <section class="latest-news">
+
+        <h2>Latest News</h2>
+
+        <img src="https://i.pinimg.com/736x/56/81/af/5681af0facafcaccee6269e9540feaa2.jpg" alt="Latest News 3">
+
+    </section>
+
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        const hamburger = document.querySelector('.hamburger');
+
+        const nav = document.querySelector('nav ul');
+
+    
+        hamburger.addEventListener('click', function() {
+
+            nav.classList.toggle('active');
+
+        });
+
+    }); // Close the DOMContentLoaded event listener here
+    
+</script>
+
+<footer>
+
+    <p>Contact us at luminousdailykiosk@services.com</p>
+
+</footer>
+
+</body>
+
+</html>

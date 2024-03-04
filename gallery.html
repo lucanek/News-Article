@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Luminous Daily Kiosk</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="header-content">
+
+        <h1>Lulu's Lantern</h1>
+
+        <nav>
+
+            <div class="hamburger">☰</div>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="article.html">Articles</a></li>
+
+                <li><a href="gallery.html">Gallery</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<main class="photo-gallery">
+
+    <div class="slides">
+
+        <div class="photo"><img src="https://i.pinimg.com/564x/63/c4/e1/63c4e114e735e6366883ba06cd67c71b.jpg" alt="M23 rebels pledge to retreat from key position in eastern DRC"></div>
+
+        <div class="photo"><img src="https://i.pinimg.com/564x/81/45/7d/81457d82d65a27bfd732315bc733e725.jpg" alt="Tens of 1000's of individuals collect all over the world in solidarity with Palestine"></div>
+
+        <div class="photo"><img src="https://i.pinimg.com/564x/ec/65/6b/ec656b09d2afb214ba0aa49484eed86f.jpg" alt="Pointe Noire"></div>
+
+        <div class="photo"><img src="https://i0.wp.com/xorlali.com/wp-content/uploads/2024/01/image-42.png?fit=770%2C513&ssl=1" alt="Afcon 2023"></div>
+
+        <div class="photo"><img src="https://peacockplume.fr/sites/default/files/Sapeur-sapologie-couleur.jpg" alt="Sapeur-sapologie-couleur"></div>
+
+    </div>
+
+    <div class="gallery-controls">
+
+        <button id="prev" onclick="prevSlide()">Previous</button>
+
+        <button id="next" onclick="nextSlide()">Next</button>
+
+    </div>
+
+</main>
+
+<script>
+
+let currentSlide = 0;
+
+const slides = document.querySelectorAll('.slides .photo');
+
+function showSlide(n) {
+
+    slides[currentSlide].style.display = 'none';
+
+    currentSlide = (n + slides.length) % slides.length;
+
+    slides[currentSlide].style.display = 'block';
+
+}
+
+function prevSlide() {
+
+    showSlide(currentSlide - 1);
+
+}
+
+function nextSlide() {
+
+    showSlide(currentSlide + 1);
+
+}
+
+// Show the first slide when the page loads
+
+showSlide(currentSlide);
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    const hamburger = document.querySelector('.hamburger');
+
+    const nav = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', function() {
+
+        nav.classList.toggle('active');
+
+    });
+    
+}); // Close the DOMContentLoaded event listener here
+
+</script>
+
+</body>
+
+</html>

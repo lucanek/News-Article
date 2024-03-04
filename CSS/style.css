@@ -1,0 +1,351 @@
+/* Nav Styles */
+
+header {
+
+    display: flex;
+
+    justify-content: center; /* Center horizontally */
+
+    align-items: center; /* Center vertically */
+
+    padding: 20px;
+
+    background-color: #F5F7F8;
+
+    border-bottom: 2px solid #495E57;
+
+    color: #F4CE14;
+
+}
+
+
+nav ul.active {
+
+    list-style-type: none;
+
+    display: block;
+
+    gap: 20px;
+
+}
+
+
+
+/* Body Styles */
+
+body {
+
+    background-color: #f0f0f0; /* Change the background color to light gray */
+
+}
+
+
+
+/* Additional styling for the navigation menu */
+
+nav ul {
+
+    display: none; /* Initially hide the navigation menu */
+
+    /* Add other styling properties as needed */
+
+}
+
+nav a {
+
+    text-decoration: none;
+
+    color: #000000;
+
+}
+
+.hamburger {
+
+    color: #000000; /* Make the hamburger icon black */
+
+}
+
+
+
+
+/* Styles for Main Content */
+
+main {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+
+    padding: 20px;
+
+}
+
+.featured-articles,
+.latest-news {
+
+    background-color: #F4CE14;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+.featured-articles img,
+.latest-news img {
+
+    width: 100%; /* Ensures images fill their containers */
+
+    height: auto; /* Maintains aspect ratio */
+
+    max-width: 100%; /* Ensures images don't exceed their container's width */
+
+    max-height: 100%; /* Ensures images don't exceed their container's height */
+
+}
+
+footer {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background-color: #45474B;
+
+    color: #F5F7F8;
+
+}
+
+
+
+
+/* Styles for Article Page */
+
+.article-header {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 20px;
+
+}
+
+
+.header-title {
+
+    color:#000000; /* Change color of Article Title */
+
+}
+
+
+
+.sidebar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+.container {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    padding: 20px;
+}
+
+.article-content {
+    flex: 1; /* Allow the article content to grow and occupy available space */
+    max-width: 900px; /* Limit the maximum width of the article content */
+    border: 1px solid #ccc; /* Add a border around each paragraph */
+    padding: 10px; /* Add padding inside the border to create space */
+    border-radius: 5px; /* Add rounded corners to the border */
+    margin-bottom: 15px; /* Add margin at the bottom of each paragraph for spacing */
+    background-color: #e6eaf1;
+}
+
+.advertisement {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ffb71b;
+    border-radius: 20px;
+    background-color: #F5F7F8;
+    text-align: center;
+    margin-top: 20px;
+    max-width: 100%; /* Ensure the advertisement doesn't exceed the width of its container */
+}
+
+.article-content img {
+
+    margin-left: 100px; /* Add some left margin for spacing */
+    
+}
+
+
+/* Advertisement Styles */
+
+.advertisement {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ffb71b;
+    border-radius: 20px;
+    background-color: #F5F7F8;
+    text-align: center;
+    margin-top: 20px;
+    /* margin-left: 25px; Remove this line */
+    margin-right: auto; /* Add this line to center the advertisement */
+    margin-left: auto; /* Add this line to center the advertisement */
+    max-width: calc(50% - 20px); /* Add this line to limit the width of the advertisement */
+}
+
+/* For larger screens, adjust the width as needed */
+@media screen and (min-width: 768px) {
+    .advertisement {
+        max-width: 300px; /* Adjust as needed */
+    }
+}
+
+.kitten-gallery {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+}
+
+.kitten-gallery img {
+
+    width: 150px; /* Adjust the size of kitten images */
+
+    height: auto;
+
+    margin: 0 10px; /* Add spacing between images */
+
+}
+
+.adopt-button {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background-color: #F4CE14;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    transition: background-color 0.3s ease;
+
+}
+
+.adopt-button:hover {
+
+    background-color: #E0B10A; /* Change color on hover */
+
+}
+
+
+
+/* Gallery Styles */
+
+.photo-gallery {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.slides {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.slides .photo img {
+
+    display: none;
+
+    max-width: 100%;
+
+    height: 300px; /* Set a fixed height for the images */
+
+    object-fit: cover; /* Ensure the images cover the entire container */
+
+}
+
+
+.slides .photo img:first-child {
+
+    display: block; /* Show the first image initially */
+
+}
+
+.gallery-controls {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.prev,
+.next {
+
+    background-color: #333;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+
+    margin: 0 10px; /* Add margin between buttons */
+
+}
